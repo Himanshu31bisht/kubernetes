@@ -1,0 +1,31 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: nginx-deployment
+  namespace: nginx
+  labels:
+    app: nginx
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nginx
+  template:
+    metadata:
+     labels:
+       app: nginx
+
+    spec:
+      containers:
+        - name: nginx-ctr
+          image: nginx
+          ports:
+          - containerPort: 80
+          volumeMounts:
+            #this is the path where nginx data stored
+            - mountPath: /var/www/html
+              name: my-volume
+      volumes:
+        - name: my-volume
+          persistentVolumeClaim:
+            claimName: local-pvc

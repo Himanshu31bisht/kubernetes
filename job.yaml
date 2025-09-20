@@ -1,0 +1,19 @@
+kind: Job
+apiVersion: batch/v1
+metadata:
+  name: myjob
+  namespace: nginx
+spec:
+  completions: 1
+  parallelism: 1
+  template:
+    metadata:
+      name: demo-job-pod
+      labels:
+        app: batch-task
+    spec:
+      containers:
+        - name: batch-conatiner
+          image: busybox
+          command: ["sh", "-c", "echo Hello Dosto! && sleep 10"]
+      restartPolicy: OnFailure
