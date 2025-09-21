@@ -41,9 +41,9 @@ git clone https://github.com/Himanshu31bisht/kubernetes.git
 cd kubernetes
 2. Apply resources individually
 For example:
-
-Bash
-
+```
+## Bash
+``bash
 kubectl apply -f pod.yaml
 kubectl apply -f deployment.yaml
 kubectl apply -f service.yaml
@@ -54,17 +54,18 @@ kubectl apply -f job.yaml
 kubectl apply -f cronjob.yaml
 kubectl apply -f deamonset.yaml
 kubectl apply -f ReplicaSet.yaml
+``
 3. Apply everything at once
 If you’re feeling bold (or just efficient 😉):
 
-Bash
-
+##Bash
+``bash
 kubectl apply -f .
 This will create all resources in one go: Pods, Deployments, Services, Ingress, PV, PVC, Jobs, CronJobs, DaemonSets, and ReplicaSets.
-
-4. Verify deployments
+``
+##4. Verify deployments
 Bash
-
+``bash
 kubectl get pods
 kubectl get deployments
 kubectl get svc
@@ -73,14 +74,16 @@ kubectl get pv,pvc
 kubectl get jobs,cronjobs
 kubectl get rs
 kubectl get ds
-5. Cleanup
+``
+##5. Cleanup
 When you’re done experimenting (and want to give your cluster a break):
 
 Bash
-
+``bash
 kubectl delete -f .
-⚙️ Repository Structure
-text
+``
+##⚙️ Repository Structure
+
 
 kubernetes/
 ├── django-notes-app/        # Django application project
@@ -95,9 +98,10 @@ kubernetes/
 ├── cronjob.yaml             # Recurring schedule job
 ├── deamonset.yaml           # DaemonSet resource
 └── README.md
-🎯 Goal
+
+##🎯 Goal
 The goal of this repo is to provide a one-stop Kubernetes learning environment with a real Django app at its core. By experimenting with these manifests, you’ll not only deploy a working web service but also grasp the roles of various Kubernetes resources.
 
-🙌 Contributions
+##🙌 Contributions
 Kubernetes is a vast ocean 🌊. If you have improvements, better manifests, or new examples—contributions are very welcome. Fork and PR away!
 
