@@ -1,35 +1,46 @@
-Kubernetes Learning Repository
-Welcome to this Kubernetes repository! 🚀
-This repo is a collection of Kubernetes configuration files, manifests, and practice examples designed to deepen understanding of how Kubernetes works in real-world scenarios.
+# Kubernetes Learning Repository  
 
-📖 Overview
-The repository includes examples for:
+Welcome to this Kubernetes repository! 🚀  
+This repo is a collection of Kubernetes configuration files, manifests, and practice examples designed to deepen understanding of how Kubernetes works in real-world scenarios.  
 
-Pod – the most basic workload unit in Kubernetes
-Deployment – declarative management of Pods (scaling, updates)
-ReplicaSet – maintaining desired Pod replicas
-Service – exposing and connecting workloads
-Ingress – external access to the Django app (via HTTP routes)
-PersistentVolume & PersistentVolumeClaim – data storage for the app
-Job – run a one-off task (useful for batch tasks or migrations)
-CronJob – run scheduled tasks in the cluster (like nightly DB cleanups)
-DaemonSet – run agents or pods on every node in the cluster
-Basically, this repo showcases almost all the "Greatest Hits" of Kubernetes resources. 🎶 Except—don’t worry—I’m not about to sing them for you…
+---
 
-🚦 Prerequisites
-Make sure you have:
+## 📖 Overview  
 
-A running Kubernetes cluster (Minikube, Kind, or cloud provider)
-kubectl installed and pointing to your cluster
-Docker installed if you want to build your own app images
-🛠️ Usage
-1. Clone the repository
-Bash
+The repository includes examples for:  
 
+- **Pod** – the most basic workload unit in Kubernetes  
+- **Deployment** – declarative management of Pods (scaling, updates)  
+- **ReplicaSet** – maintaining desired Pod replicas  
+- **Service** – exposing and connecting workloads  
+- **Ingress** – external access to the Django app (via HTTP routes)  
+- **PersistentVolume & PersistentVolumeClaim** – data storage for the app  
+- **Job** – run a one-off task (useful for batch jobs or migrations)  
+- **CronJob** – run scheduled tasks in the cluster (like nightly DB cleanups)  
+- **DaemonSet** – run agents or pods on every node in the cluster  
+
+Basically, this repo showcases almost all the *“Greatest Hits”* of Kubernetes resources. 🎶  
+(Except—don’t worry—I’m not about to sing them for you…)  
+
+---
+
+## 🚦 Prerequisites  
+
+Make sure you have:  
+- A running Kubernetes cluster (e.g., Minikube, Kind, or cloud provider)  
+- [`kubectl`](https://kubernetes.io/docs/tasks/tools/) installed and pointing to your cluster  
+- [Docker](https://docs.docker.com/) installed if you want to build your own app images  
+
+---
+
+## 🛠️ Usage  
+
+### 1. Clone the repository  
+```bash
 git clone https://github.com/Himanshu31bisht/kubernetes.git
 cd kubernetes
 2. Apply resources individually
-Example:
+For example:
 
 Bash
 
@@ -44,7 +55,7 @@ kubectl apply -f cronjob.yaml
 kubectl apply -f deamonset.yaml
 kubectl apply -f ReplicaSet.yaml
 3. Apply everything at once
-If you’re feeling bold (or just efficient):
+If you’re feeling bold (or just efficient 😉):
 
 Bash
 
