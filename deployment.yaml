@@ -23,7 +23,7 @@ spec:
           - containerPort: 80
           volumeMounts:
             #this is the path where nginx data stored
-            - mountPath: /var/www/html
+            - mountPath: /var/lib/nginx/data
               name: my-volume
       volumes:
         - name: my-volume
