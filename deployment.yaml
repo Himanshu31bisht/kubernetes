@@ -21,6 +21,13 @@ spec:
           image: nginx
           ports:
           - containerPort: 80
+          resources:
+            requests:
+              cpu: 100m
+              memory: 128Mi
+            limits:
+              cpu: 200m
+              memory: 256Mi
           volumeMounts:
             #this is the path where nginx data stored
             - mountPath: /var/lib/nginx/data
