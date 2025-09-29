@@ -1,0 +1,8 @@
+kind: DevOpsBatch
+apiVersion: himanshubisht.com/v1
+metadata: 
+  name: lakshy-batch
+spec:
+  name: DevOps-Zeri to hero lakshy batch
+  duration: 4 months
+  mode: Live
